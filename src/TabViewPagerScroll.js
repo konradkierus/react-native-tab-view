@@ -58,7 +58,7 @@ export default class TabViewPagerScroll<T: Route<*>>
     const amount = this.props.navigationState.index * this.props.layout.width;
     if (
       prevProps.navigationState !== this.props.navigationState ||
-      prevProps.layout !== this.props.layout
+      prevProps.layout.width !== this.props.layout.width
     ) {
       if (
         Platform.OS === 'android' ||
